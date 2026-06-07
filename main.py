@@ -202,7 +202,7 @@ async def require_joined(client, cb: CallbackQuery) -> bool:
     """Returns True if joined, else shows alert and returns False"""
     if not await check_joined(client, cb.from_user.id):
         await cb.answer(
-            "📢 ᴘʜᴇʟᴇ ᴄʜᴀɴɴᴇʟ ᴊᴏɪɴ ᴋᴀʀᴏ!\nhttps://t.me/" + CHANNEL_ID.lstrip('@'),
+            "📢 ᴘʜᴇʟᴇ ᴄʜᴀɴɴᴇʟ ᴊᴏɪɴ ᴋᴀʀᴏ!",
             show_alert=True
         )
         return False
