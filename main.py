@@ -30,11 +30,11 @@ def btn(text, callback_data=None, url=None, web_app=None, style=None):
 # ── ᴄᴏɴꜰɪɢ ───────────────────────────────────────────────────────
 API_ID     = int(os.environ.get("API_ID",     "20898349"))
 API_HASH   = os.environ.get("API_HASH",       "9fdb830d1e435b785f536247f49e7d87")
-BOT_TOKEN  = os.environ.get("BOT_TOKEN",      "")
+BOT_TOKEN  = os.environ.get("BOT_TOKEN",      "8914464180:AAEv2dZH1b34CsDowDF0wrFU5HP4YqjFtiQ")
 CHANNEL_ID = os.environ.get("CHANNEL_ID",     "@sxypndu")
 MASTER_KEY = os.environ.get("MASTER_KEY",     "YukiMasterAdmin2026")
 API_BASE   = os.environ.get("API_BASE",       "https://pandaapiv2.up.railway.app")
-LOG_GROUP  = os.environ.get("LOG_GROUP",      "")
+LOG_GROUP  = os.environ.get("LOG_GROUP",      "-1003468477782")
 IMG_START  = os.environ.get("IMG_START",      "https://files.catbox.moe/bd3cqo.jpg")
 
 bot = Client("ARUAPIBotV2", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
