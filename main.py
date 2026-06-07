@@ -104,19 +104,21 @@ async def check_joined(client, uid):
 
 async def log_user(client, user):
     global known_users
+    print(f"[LOG] user {user.id} | known: {user.id in known_users}")
     if user.id not in known_users:
         known_users.add(user.id); save_users(known_users)
         un = f"@{user.username}" if user.username else "ɴ/ᴀ"
         if LOG_GROUP:
             try:
-                await client.send_message(int(LOG_GROUP),  # ← string se int
+                await client.send_message(int(LOG_GROUP),
                     f"**ɴᴇᴡ ᴜsᴇʀ** 🚀\n\n"
                     f"**ɴᴀᴍᴇ:** [{user.first_name}](tg://user?id={user.id})\n"
                     f"**ɪᴅ:** `{user.id}`\n**ᴜsᴇʀɴᴀᴍᴇ:** {un}\n"
                     f"**ᴛᴏᴛᴀʟ:** `{len(known_users)}`",
                     disable_web_page_preview=True)
+                print(f"[LOG] sent to group ✅")
             except Exception as e:
-                print(f"[LOG ERROR] {e}")  # ← debug ke liye
+                print(f"[LOG ERROR] {e}")
 
 # ── ᴋᴇʏʙᴏᴀʀᴅs ────────────────────────────────────────────────────
 def _btn(text, **kwargs):
