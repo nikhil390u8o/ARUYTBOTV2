@@ -366,7 +366,7 @@ async def my_keys_cb(client, cb: CallbackQuery):
     if not sess:
         await cb.message.edit_caption("**🔐 ʟᴏɢɪɴ ʀᴇQᴜɪʀᴇᴅ**", reply_markup=auth_kb()); return
     await cb.message.edit_caption("**⏳ ʟᴏᴀᴅɪɴɢ...**")
-    d, status = await api_get("/api/keys", cookie=sess["cookie"])
+    d, status = await api_get("/api/dashboard", cookie=sess["cookie"])
     keys = d.get("keys", [])
     if not keys:
         await cb.message.edit_caption(
