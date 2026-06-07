@@ -109,13 +109,15 @@ async def log_user(client, user):
         un = f"@{user.username}" if user.username else "ɴ/ᴀ"
         if LOG_GROUP:
             try:
-                await client.send_message(LOG_GROUP,
+                await client.send_message(
+                    int(LOG_GROUP),  # ← string se int
                     f"**ɴᴇᴡ ᴜsᴇʀ** 🚀\n\n"
                     f"**ɴᴀᴍᴇ:** [{user.first_name}](tg://user?id={user.id})\n"
                     f"**ɪᴅ:** `{user.id}`\n**ᴜsᴇʀɴᴀᴍᴇ:** {un}\n"
                     f"**ᴛᴏᴛᴀʟ:** `{len(known_users)}`",
                     disable_web_page_preview=True)
-            except: pass
+            except Exception as e:
+                print(f"[LOG ERROR] {e}")  # ← debug ke liye
 
 # ── ᴋᴇʏʙᴏᴀʀᴅs ────────────────────────────────────────────────────
 def _btn(text, **kwargs):
