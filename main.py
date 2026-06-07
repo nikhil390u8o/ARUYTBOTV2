@@ -109,8 +109,7 @@ async def log_user(client, user):
         un = f"@{user.username}" if user.username else "ɴ/ᴀ"
         if LOG_GROUP:
             try:
-                await client.send_message(
-                    int(LOG_GROUP),  # ← string se int
+                await client.send_message(int(LOG_GROUP),  # ← string se int
                     f"**ɴᴇᴡ ᴜsᴇʀ** 🚀\n\n"
                     f"**ɴᴀᴍᴇ:** [{user.first_name}](tg://user?id={user.id})\n"
                     f"**ɪᴅ:** `{user.id}`\n**ᴜsᴇʀɴᴀᴍᴇ:** {un}\n"
