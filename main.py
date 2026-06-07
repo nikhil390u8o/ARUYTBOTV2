@@ -217,6 +217,14 @@ async def gate(client, cb: CallbackQuery) -> bool:
     return True
 
 # ── /sᴛᴀʀᴛ ───────────────────────────────────────────────────────
+@bot.on_message(filters.command("testlog") & filters.private)
+async def testlog(client, message: Message):
+    try:
+        await client.send_message(int(LOG_GROUP), "test log message")
+        await message.reply("✅ sent")
+    except Exception as e:
+        await message.reply(f"❌ Error: `{e}`")
+
 @bot.on_message(filters.command("start") & filters.private)
 async def start(client, message: Message):
     user = message.from_user
