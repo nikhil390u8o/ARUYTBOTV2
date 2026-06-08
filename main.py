@@ -38,7 +38,7 @@ API_HASH   = os.environ.get("API_HASH",       "9fdb830d1e435b785f536247f49e7d87"
 BOT_TOKEN  = os.environ.get("BOT_TOKEN",      "8808019830:AAFwOYjpCNGmY_om3vJ9Q0jpe34n6QAN-zA")
 CHANNEL_ID = os.environ.get("CHANNEL_ID",     "@sxypndu")
 MASTER_KEY = os.environ.get("MASTER_KEY",     "YukiMasterAdmin2026")
-API_BASE   = os.environ.get("API_BASE",       "https://pandaapiv2.up.railway.app")
+API_BASE   = os.environ.get("API_BASE",       "https://pandaapiv2.up.railway.app/dashboard")
 LOG_GROUP  = os.environ.get("LOG_GROUP",      "-1003468477782")
 IMG_START  = os.environ.get("IMG_START",      "https://files.catbox.moe/bd3cqo.jpg")
 
