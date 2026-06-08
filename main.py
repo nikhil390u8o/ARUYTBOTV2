@@ -177,7 +177,7 @@ def main_kb():
             btn("📜 ʜɪsᴛᴏʀʏ", callback_data="pay_history", style=_PRIMARY),
         ],
         [
-            btn("🌐 ᴡᴇʙ ᴅᴀsʜʙᴏᴀʀᴅ", web_app=WebAppInfo(url=f"{API_BASE}"), style=_PRIMARY),
+            btn("🌐 ᴡᴇʙ ᴅᴀsʜʙᴏᴀʀᴅ", web_app=WebAppInfo(url=f"{API_BASE}/dashboard"), style=_PRIMARY),
         ],
         [
             btn("🚪 ʟᴏɢᴏᴜᴛ", callback_data="logout", style=_DANGER),
